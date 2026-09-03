@@ -1,4 +1,4 @@
-# VCMC Bedrock Addon 2.0
+# VCMC Bedrock Addon 2.2
 
 <div align="center">
 
@@ -8,7 +8,7 @@
 
 [Download VCMC](https://antoic.com/app.html) · [Documentation](https://antoic.com/docs/vcmc.html) · [Changelog](https://antoic.com/changelog/vcmc/) · [Discord](https://discord.gg/HA5gKcpsaq)
 
-[![Version](https://img.shields.io/badge/VCMC-2.0-5865F2)](https://antoic.com/changelog/vcmc/2.0.0.html)
+[![Version](https://img.shields.io/badge/VCMC-2.2-5865F2)](https://antoic.com/changelog/vcmc/)
 [![Minecraft](https://img.shields.io/badge/Minecraft-Bedrock-62B47A)](https://www.minecraft.net/)
 [![License](https://img.shields.io/badge/Price-Free-16865B)](https://antoic.com/app.html)
 
@@ -21,6 +21,7 @@ This is the official Bedrock Addon used by VCMC. The editable source is divided 
 | Pack | Use |
 |---|---|
 | `VCMC - WORLD` | A world hosted directly from Minecraft Bedrock |
+| `VCMC - REALMS` | A Minecraft Realm connected through the VCMC app proxy |
 | `VCMC - SERVER` | A dedicated Bedrock server, including Aternos or BDS |
 | `VCMC - RP` | Shared icons, forms, translations, and interface resources |
 
@@ -34,7 +35,7 @@ Generated `.mcpack` and `.mcaddon` files are distributed through [GitHub Release
 - The shared VCMC resource pack
 - Internet access to the VCMC voice service
 
-VCMC 2.0 is recommended for all new features. Older apps and Addons retain the legacy connection flow with a reduced feature set.
+VCMC 2.2 is required for the new Realms flow and is recommended for all new features.
 
 ## Choose a Mode
 
@@ -62,7 +63,16 @@ Use this mode for BDS, Aternos, or another dedicated Bedrock server.
 
 The Addon creates and restores its protected room automatically. Players do not need an IP, room ID, or room token.
 
-## VCMC 2.0 Features
+### Minecraft Realms
+
+1. Install `VCMC - WORLD`, `VCMC - REALMS`, and `VCMC - RP` in the world before uploading it to Realms.
+2. Open the Realms section in VCMC and sign in with the Minecraft account that can join the Realm.
+3. Start the local proxy shown by the app and join through the LAN entry it creates.
+4. Paste the verification command shown by VCMC when requested.
+
+The proxy runs on the user's device; the Realm itself does not need to expose WebSockets.
+
+## VCMC 2.2 Features
 
 - Distance and spatial voice data
 - Secure World subrooms
@@ -78,6 +88,9 @@ The Addon creates and restores its protected room automatically. Players do not 
 - Custom-dimension support
 - Connection, mute, speaking, and megaphone indicators
 - Legacy compatibility for older VCMC clients
+- Minecraft Realms support
+- Localized starter command books, including Korean
+- `/vcmc:book` for recovering the user or administrator guide
 
 ## Player Commands
 
@@ -138,6 +151,7 @@ World bridge and synchronization commands are internal. Players and administrato
 ```text
 source/
 ├── VCMC - RP/
+├── VCMC - REALMS/
 ├── VCMC - SERVER/
 └── VCMC - WORLD/
 ```
@@ -160,7 +174,7 @@ source/
 ## Help
 
 - [Official VCMC documentation](https://antoic.com/docs/vcmc.html)
-- [VCMC 2.0 changelog](https://antoic.com/changelog/vcmc/2.0.0.html)
+- [VCMC changelog](https://antoic.com/changelog/vcmc/)
 - [Discord support](https://discord.gg/HA5gKcpsaq)
 - [Repository issues](../../issues)
 
